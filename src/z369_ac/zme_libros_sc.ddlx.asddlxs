@@ -43,7 +43,7 @@ annotate entity zcds_libros_sc with
                        position: 10 }]
   }
   IdLibro;
-  
+
   @UI: { lineItem: [{ position: 10,
                       importance: #HIGH }],
          selectionField: [{ position: 10 }]}
@@ -54,9 +54,13 @@ annotate entity zcds_libros_sc with
   @UI: { selectionField: [{ position: 40 }]}
   @UI: { lineItem: [{ position: 81,
                       importance: #HIGH }]}
+                                        
   Editorial;
   @UI: { lineItem: [{ position: 20,
                       importance: #HIGH }]}
+                 
+                     
+
   Autor;
   @Consumption.valueHelpDefinition: [{ entity:{ name: 'zcds_libros_sc',
                                                 element: 'Descripcion'} }]
@@ -66,6 +70,9 @@ annotate entity zcds_libros_sc with
   BiCateg;
   @UI: { lineItem: [{ position: 30,
                      importance: #HIGH }]}
+  @Consumption.valueHelpDefinition: [{ entity: {name: 'ZCDS_CATEGO_SC',
+                                                element: 'Categoria' } }]
+
   Formato;
   @UI: { lineItem: [{ position: 40,
                       importance: #HIGH }]}
