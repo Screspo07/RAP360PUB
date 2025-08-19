@@ -5,10 +5,16 @@ define root view entity ZDD_R_TRAVEL_SC
   as select from ztb_travel_sc
   composition [0..*] of ZDD_R_BOOKING_SC         as _Booking
 
-  association [0..1] to /DMO/I_Agency            as _Agency        on $projection.AgencyId      = _Agency.AgencyID
-  association [0..1] to /dmo/customer            as _Customer      on $projection.CustomerId    = _Customer.customer_id
+  association [0..1] to /DMO/I_Agency            as _Agency        on $projection.AgencyId = _Agency.AgencyID
+  association [0..1] to /dmo/customer            as _Customer      on $projection.CustomerId = _Customer.customer_id
+
+  //Forma uno de solucionar una cardinalidad de 1 a 1 cuando va de 0 a muchos
+  // association [1..1] to /DMO/I_Overall_Status_VH_Text as _OverallStatus on  $projection.OverallStatus = _OverallStatus.OverallStatus
+  //                                                                     and _OverallStatus.Language   = $session.system_language
+
   association [1..1] to /DMO/I_Overall_Status_VH as _OverallStatus on $projection.OverallStatus = _OverallStatus.OverallStatus
-  association [0..1] to I_Currency as _Currency on $projection.CurrencyCode = _Currency.Currency
+
+  association [0..1] to I_Currency               as _Currency      on $projection.CurrencyCode = _Currency.Currency
 
 {
 

@@ -12,7 +12,9 @@ CLASS zcl_sc_data_gen_rap DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_sc_data_gen_rap IMPLEMENTATION.
+
+CLASS ZCL_SC_DATA_GEN_RAP IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -97,5 +99,4 @@ CLASS zcl_sc_data_gen_rap IMPLEMENTATION.
     ).
 
   ENDMETHOD.
-
 ENDCLASS.

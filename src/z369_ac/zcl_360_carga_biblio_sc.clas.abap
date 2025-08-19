@@ -8,11 +8,12 @@ class zcl_360_carga_biblio_sc definition
 
   protected section.
   private section.
-endclass.
+ENDCLASS.
 
 
 
-class zcl_360_carga_biblio_sc  implementation.
+CLASS ZCL_360_CARGA_BIBLIO_SC IMPLEMENTATION.
+
 
   method if_oo_adt_classrun~main.
 
@@ -209,5 +210,4 @@ class zcl_360_carga_biblio_sc  implementation.
 
 
   endmethod.
-
-endclass.
+ENDCLASS.
