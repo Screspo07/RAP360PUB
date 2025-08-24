@@ -27,6 +27,8 @@ define root view entity ZDD_C_TRAVEL_SC
                                           useForValidation: true }]
 
       AgencyId,
+      @Search.defaultSearchElement: true
+      @Search.fuzzinessThreshold: 0.8
       _Agency.Name              as AgencyName,
 
       //Ayudas de busquedad
@@ -39,6 +41,8 @@ define root view entity ZDD_C_TRAVEL_SC
                                          //Ayuda para comporbar que el valor exista
                                           useForValidation: true }]
       CustomerId,
+      @Search.defaultSearchElement: true
+      @Search.fuzzinessThreshold: 0.8
       _Customer.last_name       as CustomerName,
 
       BeginDate,
